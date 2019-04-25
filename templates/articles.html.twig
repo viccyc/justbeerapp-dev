@@ -1,14 +1,3058 @@
 {# templates/articles.html.twig #}
-<!DOCTYPE html>
-<html>
-    <head>
-        {% block head %}
-            <link rel="stylesheet" href="style.css" />
-            <title>{% block title %}{% endblock %} - My Webpage</title>
-        {% endblock %}
-    </head>
-    <body>
-      <h1>Your lucky number is {{ number }}</h1>
 
-    </body>
-</html>    
+<!doctype html>
+<html lang="en">
+<head>
+		<meta charset="utf-8" />
+	<title>Just Beer | The Community For Beer Enthusiasts</title>
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=10">
+				<link rel="stylesheet" href="/assets/3.1.1.1/beers/css/style.css" />
+	
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+					(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-13215339-4', 'auto');
+		ga('send', 'pageview');
+	</script>
+
+		<script src="/assets/3.1.1.1/common/scripts/min/modernizr-min.js?v=3.2.x"></script>
+	<script src="/assets/3.1.1.1/common/scripts/min/jquery-1.12.1.min.js?v=3.2.x"></script>
+	<script src="/assets/3.1.1.1/common/scripts/min/owl.carousel.min.js?v=3.2.x"></script>
+	<script src="/assets/3.1.1.1/common/scripts/min/angular-1.5.0.min.js?v=3.2.x"></script>
+	<script src="/assets/3.1.1.1/common/scripts/min/bootstrap.min.js?v=3.2.x"></script>
+	<script src="/assets/3.1.1.1/common/scripts/min/panzoom-min.js?v=3.2.x"></script>
+
+		
+				
+
+
+	<link rel="canonical" href="https://justbeerapp.com">
+<meta name="description" content="Just Beer is a community for beer lovers and enthusiasts. Making beer approachable. Find, share and learn about beer." />
+
+			
+
+<link rel="publisher" href="https://plus.google.com/+JustBeerApp" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:site" content="@JustBeerApp" />
+<meta name="twitter:title" content="What Are You Drinking Tonight? ... JUST BEER!" />
+<meta name="twitter:description" content="Just Beer is a community for beer lovers and enthusiasts. Making beer approachable. Find, share and learn about beer." />
+<meta name="twitter:image0" content="https://cdn.justwineapp.com/assets/layout/placeholder/beer-placeholder-share.jpg" />
+
+<meta name="p:domain_verify" content=""/>
+<meta name="pinterest-rich-pin" content="true" />
+
+
+<meta property="fb:pages" content="1434238026870966" />
+<meta property="fb:app_id" content="1267502009931108" />
+<meta property="og:site_name" content="Just Beer"/>
+<meta property="og:title" content="What Are You Drinking Tonight? ... JUST BEER!" />
+<meta property="og:description" content="Just Beer is a community for beer lovers and enthusiasts. Making beer approachable. Find, share and learn about beer." />
+<meta property="og:locale" content="en_US" />
+<meta property="og:url" content="https://justbeerapp.com" />
+<meta property="og:type" content="website" />
+
+<meta property="og:image" content="https://cdn.justwineapp.com/assets/layout/placeholder/beer-placeholder-share.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+	
+				<link href='https://fonts.googleapis.com/css?family=Roboto:500,400italic,700italic,300,700,500italic,300italic,400' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700' rel='stylesheet' type='text/css'>
+
+    		    <link rel="icon" sizes="192x192" type="image/png" href="https://cdn.justwineapp.com/assets/layout/icon/beers/favicon-192.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="https://cdn.justwineapp.com/assets/layout/icon/beers/favicon-180.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="https://cdn.justwineapp.com/assets/layout/icon/beers/favicon-152.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="https://cdn.justwineapp.com/assets/layout/icon/beers/favicon-144.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="https://cdn.justwineapp.com/assets/layout/icon/beers/favicon-120.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="https://cdn.justwineapp.com/assets/layout/icon/beers/favicon-114.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="https://cdn.justwineapp.com/assets/layout/icon/beers/favicon-72.png">
+		<link rel="apple-touch-icon" href="https://cdn.justwineapp.com/assets/layout/icon/beers/favicon-57.png">
+	    <link rel="icon" sizes="64x64" type="image/png" href="https://cdn.justwineapp.com/assets/layout/icon/beers/favicon-64.png">
+    <link rel="icon" sizes="32x32" type="image/png" href="https://cdn.justwineapp.com/assets/layout/icon/beers/favicon-32.png">
+    <link rel="shortcut icon" sizes="16x16 24x24 32x32 64x64" type="image/x-icon" href="https://cdn.justwineapp.com/assets/layout/icon/beers/favicon.ico">
+
+		<meta name="theme-color" content="#1e2023">	
+		<script src="/assets/3.1.1.1/beers/scripts/min/jquery.lazyload.min.js?v=3.2.x"></script>
+	<script src="/assets/3.1.1.1/beers/scripts/content-scripts.js?v=3.2.x"></script>
+</head>
+
+
+
+	<body class="isDesktop notMobile ">			
+	
+	
+<header id="header">
+	<div class="container">
+		<a id="logo-primary" class="navbar-brand logo" href="https://justbeerapp.com/">
+			Just Beer
+		</a>
+
+							<nav id="menu-primary">
+				<ul class="nav navbar-nav">
+					<li class="spacer-to-remove ">
+						<a href="https://justbeerapp.com/search">
+							<span class="icon icon-search"></span>
+							<span class="text">Search</span>
+						</a>
+					</li>
+					<li class="active">
+						<a href="https://justbeerapp.com/">
+							<span class="icon icon-magazine"></span>
+							<span class="text">Magazine</span>
+						</a>
+					</li>
+					<li class="">
+													<a href="https://justbeerapp.com/signin">
+								<span class="icon icon-power"></span>
+								<span class="text">Sign In</span>
+							</a>
+											</li>
+				</ul>
+			</nav>
+			</div>
+
+				<nav id="menu-secondary">
+			<div class="container">
+																										
+
+
+<ul class="nav navbar-nav nav-front-end count-4">
+									<li class="active ">
+		<a href="https://justbeerapp.com/">
+			<span class="icon icon-news"></span>
+			<span class="text">News</span>
+		</a>
+	</li>
+
+									<li class=" ">
+		<a href="https://justbeerapp.com/beers">
+			<span class="icon icon-stein"></span>
+			<span class="text">Beers</span>
+		</a>
+	</li>
+
+									<li class=" ">
+		<a href="https://justbeerapp.com/local">
+			<span class="icon icon-directions"></span>
+			<span class="text">#DrinkLocal</span>
+		</a>
+	</li>
+
+												<li class=" visible-sm visible-md visible-lg">
+		<a href="https://justbeerapp.com/brands">
+			<span class="icon icon-brands"></span>
+			<span class="text">Brands</span>
+		</a>
+	</li>
+
+												<li class=" visible-sm visible-md visible-lg">
+		<a href="https://justbeerapp.com/events">
+			<span class="icon icon-calendar"></span>
+			<span class="text">Events</span>
+		</a>
+	</li>
+
+												<li class=" visible-sm visible-md visible-lg">
+		<a href="https://justbeerapp.com/deals">
+			<span class="icon icon-prices"></span>
+			<span class="text">Deals</span>
+		</a>
+	</li>
+
+			
+
+		
+<li class="li-more">
+	<a href="#" data-target="#" data-toggle="dropdown" aria-haspop="true" aria-expanded="false">
+		<span class="icon icon-arrow-down"></span>
+		<span class="text">More</span>
+	</a>
+	<ul class="dropdown-menu">
+										
+																	<li class=" hidden-sm hidden-md hidden-lg">
+		<a href="https://justbeerapp.com/brands">
+			<span class="icon icon-brands"></span>
+			<span class="text">Brands</span>
+		</a>
+	</li>
+
+																					<li class=" hidden-sm hidden-md hidden-lg">
+		<a href="https://justbeerapp.com/events">
+			<span class="icon icon-calendar"></span>
+			<span class="text">Events</span>
+		</a>
+	</li>
+
+																					<li class=" hidden-sm hidden-md hidden-lg">
+		<a href="https://justbeerapp.com/deals">
+			<span class="icon icon-prices"></span>
+			<span class="text">Deals</span>
+		</a>
+	</li>
+
+																					<li class=" ">
+		<a href="https://justbeerapp.com/awards">
+			<span class="icon icon-award"></span>
+			<span class="text">Awards</span>
+		</a>
+	</li>
+
+																					<li class=" ">
+		<a href="https://justbeerapp.com/quizzes">
+			<span class="icon icon-quiz"></span>
+			<span class="text">Quizzes</span>
+		</a>
+	</li>
+
+							
+						<li class="divider"></li>
+					</ul>
+</li>
+</ul>
+							</div>
+		</nav>
+	</header>	
+	<div id="content">
+		
+			
+																
+						<section id="zone-article-top-stories" class="banner">
+																	
+	<div class="section-header sr-only">
+		<h1 class="header">Top Stories</h1>
+
+			</div>
+
+
+														<div class="container">
+																		
+												<div class="main">
+																					
+
+	
+
+	
+	
+
+
+		
+			<div class="item item-feature item-article-feature item-first">
+		<a href="https://justbeerapp.com/article/10-reasons-you-should-drink-craft-beer" class="item-link">
+			<div class="item-inner">
+				<div class="item-media">
+					<div class="item-image">
+												<div class="background-image" style="background-image: url('https://cdn2.justwineapp.com/assets/article/2019/04/importance-of-craft-beer-justbeer.png');"></div>
+					</div>
+				</div>
+				<div class="item-content">
+																					<span class="category">Pub Talk</span>
+						<br />
+					
+										<h2 class="title">10 Reasons You Should Drink Craft Beer</h2>
+					<br />
+
+										<p class="dek">With the craft beer industry increasing rapidly throughout North America and the rest of the world, it is important to know what exactly craft beer is and why it is important to drink and support local, craft beer.
+</p>
+				</div>
+			</div>
+		</a>
+
+				
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+						"@type": "Article",
+	"headline": "10 Reasons You Should Drink Craft Beer",
+	"description": "With the craft beer industry increasing rapidly throughout North America and the rest of the world, it is important to know what exactly craft beer is and why it is important to drink and support local, craft beer.
+",
+	"url": "https://justbeerapp.com/article/10-reasons-you-should-drink-craft-beer",
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://cdn2.justwineapp.com/assets/article/2019/04/importance-of-craft-beer-justbeer-1200x630.png",
+		"width": 1200,		"height": 630
+	},
+	"mainEntityOfPage":{
+		"@type": "WebPage",
+		"@id": "https://justbeerapp.com/article/10-reasons-you-should-drink-craft-beer"
+	},
+	"datePublished": "2019-04-05T11:00:46+00:00",
+	"dateModified": "2019-04-05T22:26:43+00:00",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Just Beer",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.justwineapp.com/assets/layout/logo/logo-jb-json-ld.png",
+			"width": 165,
+			"height": 60
+		}
+	}
+			,"author": {
+			"@type": "Person",
+			"name": "The Beer Community"
+															}
+		}
+	}
+</script>	</div>
+	
+							</div>
+
+												<div class="side">
+																																																					
+
+	
+
+	
+	
+
+
+		
+			<div class="item item-feature item-article-feature ">
+		<a href="https://justbeerapp.com/article/why-do-we-celebrate-national-beer-day-on-april-7" class="item-link">
+			<div class="item-inner">
+				<div class="item-media">
+					<div class="item-image">
+												<div class="background-image" style="background-image: url('https://cdn2.justwineapp.com/assets/article/2019/04/national-beer-day-new-beers-eve-prohibition-justbeer.jpg');"></div>
+					</div>
+				</div>
+				<div class="item-content">
+																					<span class="category">JBU</span>
+						<br />
+					
+										<h2 class="title">Why Do We Celebrate National Beer Day on April 7?</h2>
+					<br />
+
+										<p class="dek">National Beer Day is celebrated on April 7 every year, commemorating the day in 1933 when President Franklin D. Roosevelt signed the Cullen-Harrison Act. 
+</p>
+				</div>
+			</div>
+		</a>
+
+				
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+						"@type": "Article",
+	"headline": "Why Do We Celebrate National Beer Day on April 7?",
+	"description": "National Beer Day is celebrated on April 7 every year, commemorating the day in 1933 when President Franklin D. Roosevelt signed the Cullen-Harrison Act. 
+",
+	"url": "https://justbeerapp.com/article/why-do-we-celebrate-national-beer-day-on-april-7",
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://cdn2.justwineapp.com/assets/article/2019/04/national-beer-day-new-beers-eve-prohibition-justbeer-1200x630.jpg",
+		"width": 1200,		"height": 630
+	},
+	"mainEntityOfPage":{
+		"@type": "WebPage",
+		"@id": "https://justbeerapp.com/article/why-do-we-celebrate-national-beer-day-on-april-7"
+	},
+	"datePublished": "2019-04-05T11:00:27+00:00",
+	"dateModified": "2019-04-05T22:26:50+00:00",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Just Beer",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.justwineapp.com/assets/layout/logo/logo-jb-json-ld.png",
+			"width": 165,
+			"height": 60
+		}
+	}
+			,"author": {
+			"@type": "Person",
+			"name": "The Beer Community"
+															}
+		}
+	}
+</script>	</div>
+	
+																																	
+
+	
+
+	
+	
+
+
+		
+			<div class="item item-feature item-article-feature ">
+		<a href="https://justbeerapp.com/article/what-bartenders-really-think-of-your-beer-order" class="item-link">
+			<div class="item-inner">
+				<div class="item-media">
+					<div class="item-image">
+												<div class="background-image" style="background-image: url('https://cdn2.justwineapp.com/assets/article/2019/03/What-Your-Bartender-Says-About-You.jpg');"></div>
+					</div>
+				</div>
+				<div class="item-content">
+																					<span class="category">Beer Banter</span>
+						<br />
+					
+										<h2 class="title">What Bartenders Really Think of Your Beer Order</h2>
+					<br />
+
+										<p class="dek">Have you ever wondered what assumptions your bartender makes about you after hearing your drink order? Well, now you know.
+</p>
+				</div>
+			</div>
+		</a>
+
+				
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+						"@type": "Article",
+	"headline": "What Bartenders Really Think of Your Beer Order",
+	"description": "Have you ever wondered what assumptions your bartender makes about you after hearing your drink order? Well, now you know.
+",
+	"url": "https://justbeerapp.com/article/what-bartenders-really-think-of-your-beer-order",
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://cdn2.justwineapp.com/assets/article/2019/03/What-Your-Bartender-Says-About-You-1200x630.jpg",
+		"width": 1200,		"height": 630
+	},
+	"mainEntityOfPage":{
+		"@type": "WebPage",
+		"@id": "https://justbeerapp.com/article/what-bartenders-really-think-of-your-beer-order"
+	},
+	"datePublished": "2019-03-05T12:00:45+00:00",
+	"dateModified": "2019-03-19T20:31:08+00:00",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Just Beer",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.justwineapp.com/assets/layout/logo/logo-jb-json-ld.png",
+			"width": 165,
+			"height": 60
+		}
+	}
+			,"author": {
+			"@type": "Person",
+			"name": "Justin Beerber"
+															}
+		}
+	}
+</script>	</div>
+	
+																																	
+
+	
+
+	
+	
+
+
+		
+			<div class="item item-feature item-article-feature ">
+		<a href="https://justbeerapp.com/article/macro-brewery-vs-micro-brewery-vs-craft-brewery-what-is-the-difference" class="item-link">
+			<div class="item-inner">
+				<div class="item-media">
+					<div class="item-image">
+												<div class="background-image" style="background-image: url('https://cdn2.justwineapp.com/assets/article/2019/01/craft-micro-macro-beer-justbeer.jpg');"></div>
+					</div>
+				</div>
+				<div class="item-content">
+																					<span class="category">JBU</span>
+						<br />
+					
+										<h2 class="title">Macro Brewery vs. Micro Brewery vs. Craft Brewery: What is the Difference?</h2>
+					<br />
+
+										<p class="dek">You’ve probably heard of the terms microbrewery, macrobrewery, and craft brewery, but do you fully understand the differences between them? Continue reading to learn how craft beers differ from macro beers and all the characteristics that are considered when classifying a brewery.
+</p>
+				</div>
+			</div>
+		</a>
+
+				
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+						"@type": "Article",
+	"headline": "Macro Brewery vs. Micro Brewery vs. Craft Brewery: What is the Difference?",
+	"description": "You’ve probably heard of the terms microbrewery, macrobrewery, and craft brewery, but do you fully understand the differences between them? Continue reading to learn how craft beers differ from macro beers and all the characteristics that are considered when classifying a brewery.
+",
+	"url": "https://justbeerapp.com/article/macro-brewery-vs-micro-brewery-vs-craft-brewery-what-is-the-difference",
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://cdn2.justwineapp.com/assets/article/2019/01/craft-micro-macro-beer-justbeer-1200x630.jpg",
+		"width": 1200,		"height": 630
+	},
+	"mainEntityOfPage":{
+		"@type": "WebPage",
+		"@id": "https://justbeerapp.com/article/macro-brewery-vs-micro-brewery-vs-craft-brewery-what-is-the-difference"
+	},
+	"datePublished": "2019-01-15T08:00:42+00:00",
+	"dateModified": "2019-03-19T20:31:54+00:00",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Just Beer",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.justwineapp.com/assets/layout/logo/logo-jb-json-ld.png",
+			"width": 165,
+			"height": 60
+		}
+	}
+			,"author": {
+			"@type": "Person",
+			"name": "The Beer Community"
+															}
+		}
+	}
+</script>	</div>
+	
+																																																				</div>
+					</div>
+
+										<div class="background-image" style="background-image: url('https://cdn2.justwineapp.com/assets/article/2019/04/importance-of-craft-beer-justbeer.png');"></div>
+				
+																			</section>
+
+			
+		<div id="wrapper-latest-and-recipes" class="container wrapper-zone">
+		<div class="row">
+
+																									
+					<section id="zone-article-latest-stories" class="wrapper-zone-xs">
+						
+
+	
+	
+	
+		
+	
+
+	<div class="zone-header  ">
+							
+	<div class="section-header ">
+		<h2 class="header">Latest Posts</h2>
+
+					<a href="/articles/latest"><span class="icon icon-arrow-right"></span><span class="text-more">More</span></a>
+			</div>
+
+	</div>
+
+			<div class="collection">
+					
+
+	
+	
+	
+	
+
+
+		
+			<div class="item item-list item-article-list ">
+		<a href="https://justbeerapp.com/article/beer-profiles-dark-roasty" class="item-link">
+			<div class="item-inner">
+				<div class="item-media">
+					<div class="item-image">
+												<div class="background-image lazy spinner" data-original="https://cdn2.justwineapp.com/assets/article/2019/04/dark-roasty-beers-540x300.jpg" style="background-image: url( 'https://cdn.justwineapp.com/assets/layout/loading_animation_beer_dark.gif' );"></div>
+					</div>
+				</div>
+				<div class="item-content">
+																<span class="category">JBU &gt; Introductory</span>
+					
+										<h3 class="title">Beer Profiles: Dark &amp; Roasty</h3>
+
+										<p class="dek">Dark and Roasty Beers: The perfect beers for anyone who loves coffee-crisp, purposely burnt marshmallows, and other bold, rich flavours.
+</p>
+				</div>
+				<div class="item-overlay"></div>
+			</div>
+		</a>
+
+				
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+						"@type": "Article",
+	"headline": "Beer Profiles: Dark &amp; Roasty",
+	"description": "Dark and Roasty Beers: The perfect beers for anyone who loves coffee-crisp, purposely burnt marshmallows, and other bold, rich flavours.
+",
+	"url": "https://justbeerapp.com/article/beer-profiles-dark-roasty",
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://cdn2.justwineapp.com/assets/article/2019/04/dark-roasty-beers-1200x630.jpg",
+		"width": 1200,		"height": 630
+	},
+	"mainEntityOfPage":{
+		"@type": "WebPage",
+		"@id": "https://justbeerapp.com/article/beer-profiles-dark-roasty"
+	},
+	"datePublished": "2019-04-22T11:00:32+00:00",
+	"dateModified": "2019-04-05T22:24:52+00:00",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Just Beer",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.justwineapp.com/assets/layout/logo/logo-jb-json-ld.png",
+			"width": 165,
+			"height": 60
+		}
+	}
+			,"author": {
+			"@type": "Person",
+			"name": "The Beer Community"
+															}
+		}
+	}
+</script>	</div>
+	
+						
+
+	
+	
+	
+	
+
+
+		
+			<div class="item item-list item-article-list ">
+		<a href="https://justbeerapp.com/article/5-cannabis-infused-beers-to-drink-on-420" class="item-link">
+			<div class="item-inner">
+				<div class="item-media">
+					<div class="item-image">
+												<div class="background-image lazy spinner" data-original="https://cdn2.justwineapp.com/assets/article/2019/04/cannabis-infused-beer-drink-420-thc-beer-cbd-beer-marijuana-edibles-justbeer-540x300.jpg" style="background-image: url( 'https://cdn.justwineapp.com/assets/layout/loading_animation_beer_dark.gif' );"></div>
+					</div>
+				</div>
+				<div class="item-content">
+																<span class="category">Pub Talk</span>
+					
+										<h3 class="title">5 Cannabis-Infused Beers To Drink on 4/20</h3>
+
+										<p class="dek">Calling all stoners, occasional weed smokers, or any beer-lover looking for a smoke-free high: Cannabis THC-infused beer is now a thing and these weed beers are the perfect drink to sip on to celebrate a pot-head’s favourite day; 4/20.
+</p>
+				</div>
+				<div class="item-overlay"></div>
+			</div>
+		</a>
+
+				
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+						"@type": "Article",
+	"headline": "5 Cannabis-Infused Beers To Drink on 4/20",
+	"description": "Calling all stoners, occasional weed smokers, or any beer-lover looking for a smoke-free high: Cannabis THC-infused beer is now a thing and these weed beers are the perfect drink to sip on to celebrate a pot-head’s favourite day; 4/20.
+",
+	"url": "https://justbeerapp.com/article/5-cannabis-infused-beers-to-drink-on-420",
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://cdn2.justwineapp.com/assets/article/2019/04/cannabis-infused-beer-drink-420-thc-beer-cbd-beer-marijuana-edibles-justbeer-1200x630.jpg",
+		"width": 1200,		"height": 630
+	},
+	"mainEntityOfPage":{
+		"@type": "WebPage",
+		"@id": "https://justbeerapp.com/article/5-cannabis-infused-beers-to-drink-on-420"
+	},
+	"datePublished": "2019-04-18T11:00:57+00:00",
+	"dateModified": "2019-04-22T17:24:35+00:00",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Just Beer",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.justwineapp.com/assets/layout/logo/logo-jb-json-ld.png",
+			"width": 165,
+			"height": 60
+		}
+	}
+			,"author": {
+			"@type": "Person",
+			"name": "Justin Beerber"
+															}
+		}
+	}
+</script>	</div>
+	
+						
+
+	
+	
+	
+	
+
+
+		
+			<div class="item item-list item-article-list ">
+		<a href="https://justbeerapp.com/article/15-refreshing-beers-to-drink-on-saison-day" class="item-link">
+			<div class="item-inner">
+				<div class="item-media">
+					<div class="item-image">
+												<div class="background-image lazy spinner" data-original="https://cdn2.justwineapp.com/assets/article/2019/04/saison-day-farmhouse-ale-justbeer-540x300.jpg" style="background-image: url( 'https://cdn.justwineapp.com/assets/layout/loading_animation_beer_dark.gif' );"></div>
+					</div>
+				</div>
+				<div class="item-content">
+																<span class="category">Pub Talk</span>
+					
+										<h3 class="title">15 Refreshing Beers To Drink on Saison Day</h3>
+
+										<p class="dek">With spring and summer just around the corner, Saisons are the perfect beer to bring in the warm weather. Celebrate National Saison Day by drinking your favourite Saison or Farmhouse Ale with your closest friends. Undecided on a Saison beer? Here’s a list of our 15 favourite Canadian Saisons!
+</p>
+				</div>
+				<div class="item-overlay"></div>
+			</div>
+		</a>
+
+				
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+						"@type": "Article",
+	"headline": "15 Refreshing Beers To Drink on Saison Day",
+	"description": "With spring and summer just around the corner, Saisons are the perfect beer to bring in the warm weather. Celebrate National Saison Day by drinking your favourite Saison or Farmhouse Ale with your closest friends. Undecided on a Saison beer? Here’s a list of our 15 favourite Canadian Saisons!
+",
+	"url": "https://justbeerapp.com/article/15-refreshing-beers-to-drink-on-saison-day",
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://cdn2.justwineapp.com/assets/article/2019/04/saison-day-farmhouse-ale-justbeer-1200x630.jpg",
+		"width": 1200,		"height": 630
+	},
+	"mainEntityOfPage":{
+		"@type": "WebPage",
+		"@id": "https://justbeerapp.com/article/15-refreshing-beers-to-drink-on-saison-day"
+	},
+	"datePublished": "2019-04-11T11:00:14+00:00",
+	"dateModified": "2019-04-08T17:53:42+00:00",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Just Beer",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.justwineapp.com/assets/layout/logo/logo-jb-json-ld.png",
+			"width": 165,
+			"height": 60
+		}
+	}
+			,"author": {
+			"@type": "Person",
+			"name": "The Beer Community"
+															}
+		}
+	}
+</script>	</div>
+	
+						
+
+	
+	
+	
+	
+
+
+		
+			<div class="item item-list item-article-list ">
+		<a href="https://justbeerapp.com/article/beer-profiles-hoppy-bitter" class="item-link">
+			<div class="item-inner">
+				<div class="item-media">
+					<div class="item-image">
+												<div class="background-image lazy spinner" data-original="https://cdn2.justwineapp.com/assets/article/2019/04/hoppy-bitter-beer-profiles-justbeer-540x300.png" style="background-image: url( 'https://cdn.justwineapp.com/assets/layout/loading_animation_beer_dark.gif' );"></div>
+					</div>
+				</div>
+				<div class="item-content">
+																<span class="category">JBU &gt; Introductory</span>
+					
+										<h3 class="title">Beer Profiles: Hoppy &amp; Bitter</h3>
+
+										<p class="dek">Bitter and Hoppy Beers: The perfect beers for anyone who loves the bitter flavour of black coffee or a strong grapefruit. 
+</p>
+				</div>
+				<div class="item-overlay"></div>
+			</div>
+		</a>
+
+				
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+						"@type": "Article",
+	"headline": "Beer Profiles: Hoppy &amp; Bitter",
+	"description": "Bitter and Hoppy Beers: The perfect beers for anyone who loves the bitter flavour of black coffee or a strong grapefruit. 
+",
+	"url": "https://justbeerapp.com/article/beer-profiles-hoppy-bitter",
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://cdn2.justwineapp.com/assets/article/2019/04/hoppy-bitter-beer-profiles-justbeer-1200x630.png",
+		"width": 1200,		"height": 630
+	},
+	"mainEntityOfPage":{
+		"@type": "WebPage",
+		"@id": "https://justbeerapp.com/article/beer-profiles-hoppy-bitter"
+	},
+	"datePublished": "2019-04-03T11:00:42+00:00",
+	"dateModified": "2019-04-04T16:21:09+00:00",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Just Beer",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.justwineapp.com/assets/layout/logo/logo-jb-json-ld.png",
+			"width": 165,
+			"height": 60
+		}
+	}
+			,"author": {
+			"@type": "Person",
+			"name": "The Beer Community"
+															}
+		}
+	}
+</script>	</div>
+	
+				</div>
+					</section>
+
+							
+																									
+					<section id="zone-article-recipes">
+																				
+
+	
+	
+	
+		
+	
+
+	<div class="zone-header  ">
+							
+	<div class="section-header ">
+		<h2 class="header">Recipes</h2>
+
+					<a href="/articles/recipes"><span class="icon icon-arrow-right"></span><span class="text-more">More</span></a>
+			</div>
+
+	</div>
+
+			<div class="collection">
+					
+
+	
+	
+	
+	
+
+
+		
+			<div class="item item-feature item-article-feature ">
+		<a href="https://justbeerapp.com/article/irish-nachos" class="item-link">
+			<div class="item-inner">
+				<div class="item-media">
+					<div class="item-image">
+												<div class="background-image" style="background-image: url('https://cdn2.justwineapp.com/assets/article/2017/03/Screen-Shot-2017-03-06-at-5.35.28-PM.png');"></div>
+					</div>
+				</div>
+				<div class="item-content">
+																					<span class="category">Recipes</span>
+						<br />
+					
+										<h3 class="title">Irish Nachos with Guinness Queso Recipe</h3>
+					<br />
+
+										<p class="dek">Just when you thought nachos couldn’t get any more decadent, Guinness Nachos came along. This has got to be the perfect St. Patrick’s Day treat (besides beer).
+</p>
+				</div>
+			</div>
+		</a>
+
+				
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+						"@type": "Article",
+	"headline": "Irish Nachos with Guinness Queso Recipe",
+	"description": "Just when you thought nachos couldn’t get any more decadent, Guinness Nachos came along. This has got to be the perfect St. Patrick’s Day treat (besides beer).
+",
+	"url": "https://justbeerapp.com/article/irish-nachos",
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://cdn2.justwineapp.com/assets/article/2017/03/Screen-Shot-2017-03-06-at-5.35.28-PM-1200x630.png",
+		"width": 1200,		"height": 630
+	},
+	"mainEntityOfPage":{
+		"@type": "WebPage",
+		"@id": "https://justbeerapp.com/article/irish-nachos"
+	},
+	"datePublished": "2019-03-15T11:00:08+00:00",
+	"dateModified": "2019-04-03T17:23:06+00:00",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Just Beer",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.justwineapp.com/assets/layout/logo/logo-jb-json-ld.png",
+			"width": 165,
+			"height": 60
+		}
+	}
+			,"author": {
+			"@type": "Person",
+			"name": "The Beer Community"
+															}
+		}
+	}
+</script>	</div>
+	
+						
+
+	
+	
+	
+	
+
+
+		
+			<div class="item item-feature item-article-feature ">
+		<a href="https://justbeerapp.com/article/diy-high-alcohol-kombucha-brew-recipe-by-boochcraft" class="item-link">
+			<div class="item-inner">
+				<div class="item-media">
+					<div class="item-image">
+												<div class="background-image" style="background-image: url('https://cdn2.justwineapp.com/assets/article/2019/02/44271249_2212087512371113_2283017027561979904_o.jpg');"></div>
+					</div>
+				</div>
+				<div class="item-content">
+																					<span class="category">Recipes</span>
+						<br />
+					
+										<h3 class="title">DIY High Alcohol Kombucha Brew Recipe by Boochcraft</h3>
+					<br />
+
+										<p class="dek">If you’ve been itching to brew your own high alcohol kombucha at home, here is a step-by-step recipe by Boochcraft that will yield 1 gallon of hard kombucha at approximately 4-7% ABV.
+</p>
+				</div>
+			</div>
+		</a>
+
+				
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+						"@type": "Article",
+	"headline": "DIY High Alcohol Kombucha Brew Recipe by Boochcraft",
+	"description": "If you’ve been itching to brew your own high alcohol kombucha at home, here is a step-by-step recipe by Boochcraft that will yield 1 gallon of hard kombucha at approximately 4-7% ABV.
+",
+	"url": "https://justbeerapp.com/article/diy-high-alcohol-kombucha-brew-recipe-by-boochcraft",
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://cdn2.justwineapp.com/assets/article/2019/02/44271249_2212087512371113_2283017027561979904_o-1200x630.jpg",
+		"width": 1200,		"height": 630
+	},
+	"mainEntityOfPage":{
+		"@type": "WebPage",
+		"@id": "https://justbeerapp.com/article/diy-high-alcohol-kombucha-brew-recipe-by-boochcraft"
+	},
+	"datePublished": "2019-02-28T18:52:29+00:00",
+	"dateModified": "2019-02-28T18:53:11+00:00",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Just Beer",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.justwineapp.com/assets/layout/logo/logo-jb-json-ld.png",
+			"width": 165,
+			"height": 60
+		}
+	}
+			,"author": {
+			"@type": "Person",
+			"name": "The Beer Community"
+															}
+		}
+	}
+</script>	</div>
+	
+						
+
+	
+	
+	
+	
+
+
+		
+			<div class="item item-feature item-article-feature ">
+		<a href="https://justbeerapp.com/article/beer-snacks-for-the-big-game" class="item-link">
+			<div class="item-inner">
+				<div class="item-media">
+					<div class="item-image">
+												<div class="background-image" style="background-image: url('https://cdn2.justwineapp.com/assets/article/2017/10/Chaplain_Sponsored_Super_Bowl_Sunday_Party_150115-F-WT808-004.jpg');"></div>
+					</div>
+				</div>
+				<div class="item-content">
+																					<span class="category">Recipes</span>
+						<br />
+					
+										<h3 class="title">Beer &amp; Football: The Best Beer Snack Ideas for Superbowl Sunday</h3>
+					<br />
+
+										<p class="dek">Whether it’s Super Bowl Sunday or Monday Night Football, these game day snack ideas are totally worth a touchdown dance!
+</p>
+				</div>
+			</div>
+		</a>
+
+				
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+						"@type": "Article",
+	"headline": "Beer &amp; Football: The Best Beer Snack Ideas for Superbowl Sunday",
+	"description": "Whether it’s Super Bowl Sunday or Monday Night Football, these game day snack ideas are totally worth a touchdown dance!
+",
+	"url": "https://justbeerapp.com/article/beer-snacks-for-the-big-game",
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://cdn2.justwineapp.com/assets/article/2017/10/Chaplain_Sponsored_Super_Bowl_Sunday_Party_150115-F-WT808-004-1200x630.jpg",
+		"width": 1200,		"height": 630
+	},
+	"mainEntityOfPage":{
+		"@type": "WebPage",
+		"@id": "https://justbeerapp.com/article/beer-snacks-for-the-big-game"
+	},
+	"datePublished": "2019-01-15T18:10:00+00:00",
+	"dateModified": "2019-01-28T22:19:48+00:00",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Just Beer",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.justwineapp.com/assets/layout/logo/logo-jb-json-ld.png",
+			"width": 165,
+			"height": 60
+		}
+	}
+			,"author": {
+			"@type": "Person",
+			"name": "The Beer Community"
+															}
+		}
+	}
+</script>	</div>
+	
+						
+
+	
+	
+	
+	
+
+
+		
+			<div class="item item-feature item-article-feature ">
+		<a href="https://justbeerapp.com/article/the-organic-moscow-mule-cocktail" class="item-link">
+			<div class="item-inner">
+				<div class="item-media">
+					<div class="item-image">
+												<div class="background-image" style="background-image: url('https://cdn2.justwineapp.com/assets/article/2016/05/Organic-Moscow-Mule-Vodka-Cocktail1.png');"></div>
+					</div>
+				</div>
+				<div class="item-content">
+																					<span class="category">Recipes</span>
+						<br />
+					
+										<h3 class="title">The Organic Moscow Mule Cocktail</h3>
+					<br />
+
+										<p class="dek">This refreshing summer cocktail using ginger beer and vodka is perfect for all those fantastic pool parties and summer BBQs.
+</p>
+				</div>
+			</div>
+		</a>
+
+				
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+						"@type": "Article",
+	"headline": "The Organic Moscow Mule Cocktail",
+	"description": "This refreshing summer cocktail using ginger beer and vodka is perfect for all those fantastic pool parties and summer BBQs.
+",
+	"url": "https://justbeerapp.com/article/the-organic-moscow-mule-cocktail",
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://cdn2.justwineapp.com/assets/article/2016/05/Organic-Moscow-Mule-Vodka-Cocktail1-721x630.png",
+		"width": 1200,		"height": 630
+	},
+	"mainEntityOfPage":{
+		"@type": "WebPage",
+		"@id": "https://justbeerapp.com/article/the-organic-moscow-mule-cocktail"
+	},
+	"datePublished": "2018-05-26T15:00:26+00:00",
+	"dateModified": "2018-12-11T18:18:21+00:00",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Just Beer",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.justwineapp.com/assets/layout/logo/logo-jb-json-ld.png",
+			"width": 165,
+			"height": 60
+		}
+	}
+			,"author": {
+			"@type": "Person",
+			"name": "Taylor Tomita"
+															}
+		}
+	}
+</script>	</div>
+	
+						
+
+	
+	
+	
+	
+
+
+		
+			<div class="item item-feature item-article-feature ">
+		<a href="https://justbeerapp.com/article/sondra-baker-the-beer-mavens-beer-beef-stew" class="item-link">
+			<div class="item-inner">
+				<div class="item-media">
+					<div class="item-image">
+												<div class="background-image" style="background-image: url('https://cdn2.justwineapp.com/assets/article/2016/05/BEEF-STEW_5525.jpg');"></div>
+					</div>
+				</div>
+				<div class="item-content">
+																					<span class="category">Recipes</span>
+						<br />
+					
+										<h3 class="title">The Beer Maven’s Beer Beef Stew</h3>
+					<br />
+
+										<p class="dek">What’s better than a regular beef stew? Beer beef stew! Follow this recipe for your slow cooker, electric pressure cooker or Instant Pot.
+</p>
+				</div>
+			</div>
+		</a>
+
+				
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+						"@type": "Article",
+	"headline": "The Beer Maven’s Beer Beef Stew",
+	"description": "What’s better than a regular beef stew? Beer beef stew! Follow this recipe for your slow cooker, electric pressure cooker or Instant Pot.
+",
+	"url": "https://justbeerapp.com/article/sondra-baker-the-beer-mavens-beer-beef-stew",
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://cdn2.justwineapp.com/assets/article/2016/05/BEEF-STEW_5525.jpg",
+		"width": 1200,		"height": 630
+	},
+	"mainEntityOfPage":{
+		"@type": "WebPage",
+		"@id": "https://justbeerapp.com/article/sondra-baker-the-beer-mavens-beer-beef-stew"
+	},
+	"datePublished": "2018-05-09T13:00:20+00:00",
+	"dateModified": "2018-12-17T22:37:36+00:00",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Just Beer",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.justwineapp.com/assets/layout/logo/logo-jb-json-ld.png",
+			"width": 165,
+			"height": 60
+		}
+	}
+			,"author": {
+			"@type": "Person",
+			"name": "The Beer Maven Sondra Baker"
+															}
+		}
+	}
+</script>	</div>
+	
+						
+
+	
+	
+	
+	
+
+
+		
+			<div class="item item-feature item-article-feature ">
+		<a href="https://justbeerapp.com/article/mulled-beer-recipes" class="item-link">
+			<div class="item-inner">
+				<div class="item-media">
+					<div class="item-image">
+												<div class="background-image" style="background-image: url('https://cdn2.justwineapp.com/assets/article/2017/12/FtrImg1.jpg');"></div>
+					</div>
+				</div>
+				<div class="item-content">
+																					<span class="category">Recipes</span>
+						<br />
+					
+										<h3 class="title">5 Delicious Mulled Beer Recipes You Need To Try</h3>
+					<br />
+
+										<p class="dek">After a long winter’s day, you’re craving a warm and cozy beverage. What do you grab? A hot glass of… beer!
+</p>
+				</div>
+			</div>
+		</a>
+
+				
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+						"@type": "Article",
+	"headline": "5 Delicious Mulled Beer Recipes You Need To Try",
+	"description": "After a long winter’s day, you’re craving a warm and cozy beverage. What do you grab? A hot glass of… beer!
+",
+	"url": "https://justbeerapp.com/article/mulled-beer-recipes",
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://cdn2.justwineapp.com/assets/article/2017/12/FtrImg1-1200x630.jpg",
+		"width": 1200,		"height": 630
+	},
+	"mainEntityOfPage":{
+		"@type": "WebPage",
+		"@id": "https://justbeerapp.com/article/mulled-beer-recipes"
+	},
+	"datePublished": "2017-12-26T18:00:26+00:00",
+	"dateModified": "2019-01-31T17:48:04+00:00",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Just Beer",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.justwineapp.com/assets/layout/logo/logo-jb-json-ld.png",
+			"width": 165,
+			"height": 60
+		}
+	}
+			,"author": {
+			"@type": "Person",
+			"name": "The Beer Community"
+															}
+		}
+	}
+</script>	</div>
+	
+				</div>
+											</section>
+									</div>
+	</div>
+		<div id="zone-drink-local" class="wrapper-zone">
+		<div class="container full-width">
+						<div class="text-center">
+				<h2 class="header">Tap into the local beer scene <span>#DrinkLocal</span> with JustBeer</h2>
+			</div>
+
+						<div class="zone-content">
+				<div class="col-lg-6 column-left">
+					<p>Celebrating and supporting local beers and breweries is important. <strong>#DrinkLocal</strong> will keep you in touch with local beer culture and events.</p>
+				</div>
+
+				<div class="col-lg-6 column-right">
+										
+<ul id="drink-local-summary">
+	<li><span class="icon icon-map"></span> Browse the local Beer map</li>
+	<li><span class="icon icon-deals"></span> Save a buck with deals &amp; sales</li>
+	<li><span class="icon icon-brands"></span> Explore local breweries</li>
+	<li><span class="icon icon-calendar"></span> Attend special events</li>
+	<li><span class="icon icon-discover"></span> Find places serving craft beer</li>
+	<li><span class="icon icon-news"></span> Check out local beer news</li>
+</ul>				</div>
+
+								<div class="full-width text-center">
+					<a class="btn btn-outline-white" href="https://justbeerapp.com/local"><span class="text-more">Visit #DrinkLocal</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		<div id="wrapper-funny-and-industry" class="container wrapper-zone">
+		<div class="row">
+
+																									
+					<section id="zone-article-funny" class="container wrapper-zone-xs">
+						
+
+	
+	
+	
+		
+	
+
+	<div class="zone-header  ">
+							
+	<div class="section-header ">
+		<h2 class="header">Beer Banter</h2>
+
+					<a href="/articles/banter"><span class="icon icon-arrow-right"></span><span class="text-more">More</span></a>
+			</div>
+
+	</div>
+
+			<div class="collection">
+					
+
+	
+	
+	
+	
+
+
+		
+			<div class="item item-feature item-article-feature ">
+		<a href="https://justbeerapp.com/article/video-beer-never-broke-my-heart-song-and-lyrics" class="item-link">
+			<div class="item-inner">
+				<div class="item-media">
+					<div class="item-image">
+												<div class="background-image" style="background-image: url('https://cdn2.justwineapp.com/assets/article/2019/02/LC-NEWS.jpg');"></div>
+					</div>
+				</div>
+				<div class="item-content">
+																					<span class="category">Beer Banter</span>
+						<br />
+					
+										<h3 class="title">VIDEO: Beer Never Broke My Heart (Song and Lyrics)</h3>
+					<br />
+
+										<p class="dek">Check out Luke Combs’ newest song, Beer Never Broke My Heart. Is it just me or does this song make you want to grab a longneck ice cold beer right now?
+</p>
+				</div>
+			</div>
+		</a>
+
+				
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+						"@type": "Article",
+	"headline": "VIDEO: Beer Never Broke My Heart (Song and Lyrics)",
+	"description": "Check out Luke Combs’ newest song, Beer Never Broke My Heart. Is it just me or does this song make you want to grab a longneck ice cold beer right now?
+",
+	"url": "https://justbeerapp.com/article/video-beer-never-broke-my-heart-song-and-lyrics",
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://cdn2.justwineapp.com/assets/article/2019/02/LC-NEWS-1200x630.jpg",
+		"width": 1200,		"height": 630
+	},
+	"mainEntityOfPage":{
+		"@type": "WebPage",
+		"@id": "https://justbeerapp.com/article/video-beer-never-broke-my-heart-song-and-lyrics"
+	},
+	"datePublished": "2019-02-28T19:34:00+00:00",
+	"dateModified": "2019-03-29T15:56:23+00:00",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Just Beer",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.justwineapp.com/assets/layout/logo/logo-jb-json-ld.png",
+			"width": 165,
+			"height": 60
+		}
+	}
+			,"author": {
+			"@type": "Person",
+			"name": "Justin Beerber"
+															}
+		}
+	}
+</script>	</div>
+	
+				</div>
+					</section>
+							
+																									
+					<section id="zone-article-industry" class="container">
+						
+
+	
+	
+	
+		
+	
+
+	<div class="zone-header  ">
+							
+	<div class="section-header ">
+		<h2 class="header">Industry News</h2>
+
+					<a href="/articles/industry"><span class="icon icon-arrow-right"></span><span class="text-more">More</span></a>
+			</div>
+
+	</div>
+
+			<div class="collection">
+					
+
+	
+	
+	
+	
+
+
+		
+			<div class="item item-list item-article-list ">
+		<a href="https://justbeerapp.com/article/kingfisher-launches-instant-beer-sachets-for-beer-anytime-anywhere" class="item-link">
+			<div class="item-inner">
+				<div class="item-media">
+					<div class="item-image">
+												<div class="background-image lazy spinner" data-original="https://cdn2.justwineapp.com/assets/article/2019/04/Kingfisher-Instant-Beer-April-Fools-Day-Prank-540x300.jpg" style="background-image: url( 'https://cdn.justwineapp.com/assets/layout/loading_animation_beer_dark.gif' );"></div>
+					</div>
+				</div>
+				<div class="item-content">
+																<span class="category">Industry News</span>
+					
+										<h3 class="title">Kingfisher Launches Instant Beer Sachets For Beer Anytime, Anywhere</h3>
+
+										<p class="dek">Kingfisher just announced the release of their Instant Beer Packets and it has got us all thinking, “This is too good to be true.” We know the brewers at Kingfisher are master brewers… But are they also master pranksters?!
+</p>
+				</div>
+				<div class="item-overlay"></div>
+			</div>
+		</a>
+
+				
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+						"@type": "Article",
+	"headline": "Kingfisher Launches Instant Beer Sachets For Beer Anytime, Anywhere",
+	"description": "Kingfisher just announced the release of their Instant Beer Packets and it has got us all thinking, “This is too good to be true.” We know the brewers at Kingfisher are master brewers… But are they also master pranksters?!
+",
+	"url": "https://justbeerapp.com/article/kingfisher-launches-instant-beer-sachets-for-beer-anytime-anywhere",
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://cdn2.justwineapp.com/assets/article/2019/04/Kingfisher-Instant-Beer-April-Fools-Day-Prank-1200x630.jpg",
+		"width": 1200,		"height": 630
+	},
+	"mainEntityOfPage":{
+		"@type": "WebPage",
+		"@id": "https://justbeerapp.com/article/kingfisher-launches-instant-beer-sachets-for-beer-anytime-anywhere"
+	},
+	"datePublished": "2019-04-02T16:57:29+00:00",
+	"dateModified": "2019-04-02T17:04:12+00:00",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Just Beer",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.justwineapp.com/assets/layout/logo/logo-jb-json-ld.png",
+			"width": 165,
+			"height": 60
+		}
+	}
+			,"author": {
+			"@type": "Person",
+			"name": "Mairyn Chorney"
+															}
+		}
+	}
+</script>	</div>
+	
+						
+
+	
+	
+	
+	
+
+
+		
+			<div class="item item-list item-article-list ">
+		<a href="https://justbeerapp.com/article/calgary-edmonton-beer-events" class="item-link">
+			<div class="item-inner">
+				<div class="item-media">
+					<div class="item-image">
+												<div class="background-image lazy spinner" data-original="https://cdn2.justwineapp.com/assets/article/2019/02/beer-events-in-calgary-edmonton-justbeer-540x300.jpg" style="background-image: url( 'https://cdn.justwineapp.com/assets/layout/loading_animation_beer_dark.gif' );"></div>
+					</div>
+				</div>
+				<div class="item-content">
+																<span class="category">Industry News</span>
+					
+										<h3 class="title">Calgary &amp; Edmonton Beer Events in April 2019</h3>
+
+										<p class="dek">Check out these amazing beer events happening in April 2019 in Calgary and Edmonton!
+</p>
+				</div>
+				<div class="item-overlay"></div>
+			</div>
+		</a>
+
+				
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+						"@type": "Article",
+	"headline": "Calgary &amp; Edmonton Beer Events in April 2019",
+	"description": "Check out these amazing beer events happening in April 2019 in Calgary and Edmonton!
+",
+	"url": "https://justbeerapp.com/article/calgary-edmonton-beer-events",
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://cdn2.justwineapp.com/assets/article/2019/02/beer-events-in-calgary-edmonton-justbeer-1200x630.jpg",
+		"width": 1200,		"height": 630
+	},
+	"mainEntityOfPage":{
+		"@type": "WebPage",
+		"@id": "https://justbeerapp.com/article/calgary-edmonton-beer-events"
+	},
+	"datePublished": "2019-03-27T11:00:45+00:00",
+	"dateModified": "2019-03-28T15:55:35+00:00",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Just Beer",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.justwineapp.com/assets/layout/logo/logo-jb-json-ld.png",
+			"width": 165,
+			"height": 60
+		}
+	}
+			,"author": {
+			"@type": "Person",
+			"name": "The Beer Community"
+															}
+		}
+	}
+</script>	</div>
+	
+						
+
+	
+	
+	
+	
+
+
+		
+			<div class="item item-list item-article-list ">
+		<a href="https://justbeerapp.com/article/good-boy-dog-beer-houston-company-creates-line-of-beer-safe-for-dogs" class="item-link">
+			<div class="item-inner">
+				<div class="item-media">
+					<div class="item-image">
+												<div class="background-image lazy spinner" data-original="https://cdn2.justwineapp.com/assets/article/2019/03/good-boy-dog-beer-justbeer-540x300.jpg" style="background-image: url( 'https://cdn.justwineapp.com/assets/layout/loading_animation_beer_dark.gif' );"></div>
+					</div>
+				</div>
+				<div class="item-content">
+																<span class="category">Industry News</span>
+					
+										<h3 class="title">Good Boy Dog Beer: Houston Company Creates Line Of Dog-Safe Beer</h3>
+
+										<p class="dek">Ever wanted to sit back and have a brew with your four-legged friend? Good Boy Dog Beer has made it possible with their new line of dog friendly beers!
+</p>
+				</div>
+				<div class="item-overlay"></div>
+			</div>
+		</a>
+
+				
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+						"@type": "Article",
+	"headline": "Good Boy Dog Beer: Houston Company Creates Line Of Dog-Safe Beer",
+	"description": "Ever wanted to sit back and have a brew with your four-legged friend? Good Boy Dog Beer has made it possible with their new line of dog friendly beers!
+",
+	"url": "https://justbeerapp.com/article/good-boy-dog-beer-houston-company-creates-line-of-beer-safe-for-dogs",
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://cdn2.justwineapp.com/assets/article/2019/03/good-boy-dog-beer-justbeer-1200x630.jpg",
+		"width": 1200,		"height": 630
+	},
+	"mainEntityOfPage":{
+		"@type": "WebPage",
+		"@id": "https://justbeerapp.com/article/good-boy-dog-beer-houston-company-creates-line-of-beer-safe-for-dogs"
+	},
+	"datePublished": "2019-03-12T19:45:01+00:00",
+	"dateModified": "2019-03-12T19:47:03+00:00",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Just Beer",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.justwineapp.com/assets/layout/logo/logo-jb-json-ld.png",
+			"width": 165,
+			"height": 60
+		}
+	}
+			,"author": {
+			"@type": "Person",
+			"name": "Justin Beerber"
+															}
+		}
+	}
+</script>	</div>
+	
+				</div>
+					</section>
+									</div>
+	</div>
+		<div id="wrapper-terms-and-university" class="container wrapper-zone">
+		<div class="row">
+
+																									
+					<section id="zone-article-terms" class="wrapper-zone-xs">
+						
+
+	
+	
+	
+		
+	
+
+	<div class="zone-header  ">
+							
+	<div class="section-header ">
+		<h2 class="header">Random Terms</h2>
+
+			</div>
+
+	</div>
+
+			<div class="collection">
+					
+
+	
+	
+	
+	
+
+
+		
+			<div class="item item-sliver item-article-sliver ">
+		<a href="https://justbeerapp.com/article/sediment-2" class="item-link">
+			<div class="item-inner">
+				<div class="item-content">
+										<h3 class="title">Sediment</h3>
+				</div>
+			</div>
+		</a>
+
+				
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+						"@type": "Article",
+	"headline": "Sediment",
+	"description": "",
+	"url": "https://justbeerapp.com/article/sediment-2",
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://cdn.justwineapp.com/assets/layout/placeholder/beer-placeholder-share.jpg",
+		"width": 1200,		"height": 630
+	},
+	"mainEntityOfPage":{
+		"@type": "WebPage",
+		"@id": "https://justbeerapp.com/article/sediment-2"
+	},
+	"datePublished": "2016-03-24T22:46:45+00:00",
+	"dateModified": "2016-03-24T22:46:45+00:00",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Just Beer",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.justwineapp.com/assets/layout/logo/logo-jb-json-ld.png",
+			"width": 165,
+			"height": 60
+		}
+	}
+			,"author": {
+			"@type": "Person",
+			"name": "Justin Beerber"
+															}
+		}
+	}
+</script>	</div>
+	
+						
+
+	
+	
+	
+	
+
+
+		
+			<div class="item item-sliver item-article-sliver ">
+		<a href="https://justbeerapp.com/article/kraeusen" class="item-link">
+			<div class="item-inner">
+				<div class="item-content">
+										<h3 class="title">Kräusen</h3>
+				</div>
+			</div>
+		</a>
+
+				
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+						"@type": "Article",
+	"headline": "Kräusen",
+	"description": "n – The rocky head of foam which appears on the surface of the wort during fermentation. v – A method of conditioning in which a small quantity of unfermented wort is added to a fully fermented beer to create a secondary fermentation and natural carbonation.
+",
+	"url": "https://justbeerapp.com/article/kraeusen",
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://cdn.justwineapp.com/assets/layout/placeholder/beer-placeholder-share.jpg",
+		"width": 1200,		"height": 630
+	},
+	"mainEntityOfPage":{
+		"@type": "WebPage",
+		"@id": "https://justbeerapp.com/article/kraeusen"
+	},
+	"datePublished": "2016-03-24T18:25:04+00:00",
+	"dateModified": "2016-03-24T18:29:21+00:00",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Just Beer",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.justwineapp.com/assets/layout/logo/logo-jb-json-ld.png",
+			"width": 165,
+			"height": 60
+		}
+	}
+			,"author": {
+			"@type": "Person",
+			"name": "Justin Beerber"
+															}
+		}
+	}
+</script>	</div>
+	
+						
+
+	
+	
+	
+	
+
+
+		
+			<div class="item item-sliver item-article-sliver ">
+		<a href="https://justbeerapp.com/article/homebrewing" class="item-link">
+			<div class="item-inner">
+				<div class="item-content">
+										<h3 class="title">Homebrewing</h3>
+				</div>
+			</div>
+		</a>
+
+				
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+						"@type": "Article",
+	"headline": "Homebrewing",
+	"description": "The art of making beer at home.
+",
+	"url": "https://justbeerapp.com/article/homebrewing",
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://cdn.justwineapp.com/assets/layout/placeholder/beer-placeholder-share.jpg",
+		"width": 1200,		"height": 630
+	},
+	"mainEntityOfPage":{
+		"@type": "WebPage",
+		"@id": "https://justbeerapp.com/article/homebrewing"
+	},
+	"datePublished": "2016-03-23T22:17:16+00:00",
+	"dateModified": "2016-03-24T16:20:12+00:00",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Just Beer",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.justwineapp.com/assets/layout/logo/logo-jb-json-ld.png",
+			"width": 165,
+			"height": 60
+		}
+	}
+			,"author": {
+			"@type": "Person",
+			"name": "Justin Beerber"
+															}
+		}
+	}
+</script>	</div>
+	
+						
+
+	
+	
+	
+	
+
+
+		
+			<div class="item item-sliver item-article-sliver ">
+		<a href="https://justbeerapp.com/article/keg" class="item-link">
+			<div class="item-inner">
+				<div class="item-content">
+										<h3 class="title">Keg</h3>
+				</div>
+			</div>
+		</a>
+
+				
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+						"@type": "Article",
+	"headline": "Keg",
+	"description": "",
+	"url": "https://justbeerapp.com/article/keg",
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://cdn.justwineapp.com/assets/layout/placeholder/beer-placeholder-share.jpg",
+		"width": 1200,		"height": 630
+	},
+	"mainEntityOfPage":{
+		"@type": "WebPage",
+		"@id": "https://justbeerapp.com/article/keg"
+	},
+	"datePublished": "2016-03-24T18:12:52+00:00",
+	"dateModified": "2016-03-24T18:12:52+00:00",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Just Beer",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.justwineapp.com/assets/layout/logo/logo-jb-json-ld.png",
+			"width": 165,
+			"height": 60
+		}
+	}
+			,"author": {
+			"@type": "Person",
+			"name": "Justin Beerber"
+															}
+		}
+	}
+</script>	</div>
+	
+						
+
+	
+	
+	
+	
+
+
+		
+			<div class="item item-sliver item-article-sliver ">
+		<a href="https://justbeerapp.com/article/festbier" class="item-link">
+			<div class="item-inner">
+				<div class="item-content">
+										<h3 class="title">Festbier</h3>
+				</div>
+			</div>
+		</a>
+
+				
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+						"@type": "Article",
+	"headline": "Festbier",
+	"description": "BJCP Style Guideline: “A smooth, clean, pale German lager with a moderately strong malty flavor and a light hop character. Deftly balances strength and drinkability, with a palate impression and finish that encourages drinking. Showcases elegant German malt flavors without becoming too heavy or filling.”
+",
+	"url": "https://justbeerapp.com/article/festbier",
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://cdn.justwineapp.com/assets/layout/placeholder/beer-placeholder-share.jpg",
+		"width": 1200,		"height": 630
+	},
+	"mainEntityOfPage":{
+		"@type": "WebPage",
+		"@id": "https://justbeerapp.com/article/festbier"
+	},
+	"datePublished": "2018-03-28T16:37:10+00:00",
+	"dateModified": "2018-11-01T21:59:08+00:00",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Just Beer",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.justwineapp.com/assets/layout/logo/logo-jb-json-ld.png",
+			"width": 165,
+			"height": 60
+		}
+	}
+			,"author": {
+			"@type": "Person",
+			"name": "Justin Beerber"
+															}
+		}
+	}
+</script>	</div>
+	
+						
+
+	
+	
+	
+	
+
+
+		
+			<div class="item item-sliver item-article-sliver ">
+		<a href="https://justbeerapp.com/article/lovibond" class="item-link">
+			<div class="item-inner">
+				<div class="item-content">
+										<h3 class="title">Lovibond</h3>
+				</div>
+			</div>
+		</a>
+
+				
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+						"@type": "Article",
+	"headline": "Lovibond",
+	"description": "",
+	"url": "https://justbeerapp.com/article/lovibond",
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://cdn.justwineapp.com/assets/layout/placeholder/beer-placeholder-share.jpg",
+		"width": 1200,		"height": 630
+	},
+	"mainEntityOfPage":{
+		"@type": "WebPage",
+		"@id": "https://justbeerapp.com/article/lovibond"
+	},
+	"datePublished": "2016-03-24T19:08:21+00:00",
+	"dateModified": "2016-03-24T19:08:21+00:00",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Just Beer",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.justwineapp.com/assets/layout/logo/logo-jb-json-ld.png",
+			"width": 165,
+			"height": 60
+		}
+	}
+			,"author": {
+			"@type": "Person",
+			"name": "Justin Beerber"
+															}
+		}
+	}
+</script>	</div>
+	
+						
+
+	
+	
+	
+	
+
+
+		
+			<div class="item item-sliver item-article-sliver ">
+		<a href="https://justbeerapp.com/article/palate-2" class="item-link">
+			<div class="item-inner">
+				<div class="item-content">
+										<h3 class="title">Palate</h3>
+				</div>
+			</div>
+		</a>
+
+				
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+						"@type": "Article",
+	"headline": "Palate",
+	"description": "",
+	"url": "https://justbeerapp.com/article/palate-2",
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://cdn.justwineapp.com/assets/layout/placeholder/beer-placeholder-share.jpg",
+		"width": 1200,		"height": 630
+	},
+	"mainEntityOfPage":{
+		"@type": "WebPage",
+		"@id": "https://justbeerapp.com/article/palate-2"
+	},
+	"datePublished": "2016-03-24T21:29:55+00:00",
+	"dateModified": "2016-03-24T21:29:55+00:00",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Just Beer",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.justwineapp.com/assets/layout/logo/logo-jb-json-ld.png",
+			"width": 165,
+			"height": 60
+		}
+	}
+			,"author": {
+			"@type": "Person",
+			"name": "Justin Beerber"
+															}
+		}
+	}
+</script>	</div>
+	
+						
+
+	
+	
+	
+	
+
+
+		
+			<div class="item item-sliver item-article-sliver ">
+		<a href="https://justbeerapp.com/article/heat-exchangers" class="item-link">
+			<div class="item-inner">
+				<div class="item-content">
+										<h3 class="title">Heat Exchangers</h3>
+				</div>
+			</div>
+		</a>
+
+				
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+						"@type": "Article",
+	"headline": "Heat Exchangers",
+	"description": "",
+	"url": "https://justbeerapp.com/article/heat-exchangers",
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://cdn.justwineapp.com/assets/layout/placeholder/beer-placeholder-share.jpg",
+		"width": 1200,		"height": 630
+	},
+	"mainEntityOfPage":{
+		"@type": "WebPage",
+		"@id": "https://justbeerapp.com/article/heat-exchangers"
+	},
+	"datePublished": "2016-03-23T22:14:33+00:00",
+	"dateModified": "2016-03-24T16:20:28+00:00",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Just Beer",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.justwineapp.com/assets/layout/logo/logo-jb-json-ld.png",
+			"width": 165,
+			"height": 60
+		}
+	}
+			,"author": {
+			"@type": "Person",
+			"name": "Justin Beerber"
+															}
+		}
+	}
+</script>	</div>
+	
+						
+
+	
+	
+	
+	
+
+
+		
+			<div class="item item-sliver item-article-sliver ">
+		<a href="https://justbeerapp.com/article/filtration" class="item-link">
+			<div class="item-inner">
+				<div class="item-content">
+										<h3 class="title">Filtration</h3>
+				</div>
+			</div>
+		</a>
+
+				
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+						"@type": "Article",
+	"headline": "Filtration",
+	"description": "",
+	"url": "https://justbeerapp.com/article/filtration",
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://cdn.justwineapp.com/assets/layout/placeholder/beer-placeholder-share.jpg",
+		"width": 1200,		"height": 630
+	},
+	"mainEntityOfPage":{
+		"@type": "WebPage",
+		"@id": "https://justbeerapp.com/article/filtration"
+	},
+	"datePublished": "2016-03-23T20:51:07+00:00",
+	"dateModified": "2016-03-24T16:31:08+00:00",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Just Beer",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.justwineapp.com/assets/layout/logo/logo-jb-json-ld.png",
+			"width": 165,
+			"height": 60
+		}
+	}
+			,"author": {
+			"@type": "Person",
+			"name": "Justin Beerber"
+															}
+		}
+	}
+</script>	</div>
+	
+				</div>
+					</section>
+							
+																														
+					<section id="zone-article-university">
+						
+
+	
+	
+	
+		
+	
+
+	<div class="zone-header  ">
+							
+	<div class="section-header ">
+		<h2 class="header">JB University</h2>
+
+					<a href="/articles/university"><span class="icon icon-arrow-right"></span><span class="text-more">More</span></a>
+			</div>
+
+	</div>
+
+			<div class="collection">
+					
+
+	
+	
+	
+
+
+
+		
+			<div class="item item-list item-article-list ">
+		<a href="https://justbeerapp.com/article/the-ultimate-guide-choosing-beer-for-your-wedding" class="item-link">
+			<div class="item-inner">
+				<div class="item-media">
+					<div class="item-image">
+												<div class="background-image lazy spinner" data-original="https://cdn2.justwineapp.com/assets/article/2019/03/BreweryWedding-2-540x300.jpg" style="background-image: url( 'https://cdn.justwineapp.com/assets/layout/loading_animation_beer_dark.gif' );"></div>
+					</div>
+				</div>
+				<div class="item-content">
+																<span class="category">JBU</span>
+					
+										<h3 class="title">The Ultimate Guide to Choosing Beer for Your Wedding</h3>
+
+										<p class="dek">Should I buy beer bottles or beer kegs for my wedding? How much beer should I buy for a wedding of 100 people? This wedding beer guide was created to make the process of buying beer for your wedding day simple.
+</p>
+				</div>
+				<div class="item-overlay"></div>
+			</div>
+		</a>
+
+				
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+						"@type": "Article",
+	"headline": "The Ultimate Guide to Choosing Beer for Your Wedding",
+	"description": "Should I buy beer bottles or beer kegs for my wedding? How much beer should I buy for a wedding of 100 people? This wedding beer guide was created to make the process of buying beer for your wedding day simple.
+",
+	"url": "https://justbeerapp.com/article/the-ultimate-guide-choosing-beer-for-your-wedding",
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://cdn2.justwineapp.com/assets/article/2019/03/BreweryWedding-2-1200x630.jpg",
+		"width": 1200,		"height": 630
+	},
+	"mainEntityOfPage":{
+		"@type": "WebPage",
+		"@id": "https://justbeerapp.com/article/the-ultimate-guide-choosing-beer-for-your-wedding"
+	},
+	"datePublished": "2019-04-02T17:45:14+00:00",
+	"dateModified": "2019-04-23T20:56:32+00:00",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Just Beer",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.justwineapp.com/assets/layout/logo/logo-jb-json-ld.png",
+			"width": 165,
+			"height": 60
+		}
+	}
+			,"author": {
+			"@type": "Person",
+			"name": "Clara Jaide"
+															}
+		}
+	}
+</script>	</div>
+	
+						
+
+	
+	
+	
+
+
+
+		
+			<div class="item item-list item-article-list ">
+		<a href="https://justbeerapp.com/article/beer-profiles-crisp-and-clean" class="item-link">
+			<div class="item-inner">
+				<div class="item-media">
+					<div class="item-image">
+												<div class="background-image lazy spinner" data-original="https://cdn2.justwineapp.com/assets/article/2019/04/crisp-clean-beers-justbeer-540x300.jpg" style="background-image: url( 'https://cdn.justwineapp.com/assets/layout/loading_animation_beer_dark.gif' );"></div>
+					</div>
+				</div>
+				<div class="item-content">
+																<span class="category">JBU &gt; Introductory</span>
+					
+										<h3 class="title">Beer Profiles: Crisp and Clean</h3>
+
+										<p class="dek">Crisp and Clean Beers: The perfect beers for anyone who loves the summer months, hanging with friends on patios, and pairing anything barbecue with refreshing brews.
+</p>
+				</div>
+				<div class="item-overlay"></div>
+			</div>
+		</a>
+
+				
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+						"@type": "Article",
+	"headline": "Beer Profiles: Crisp and Clean",
+	"description": "Crisp and Clean Beers: The perfect beers for anyone who loves the summer months, hanging with friends on patios, and pairing anything barbecue with refreshing brews.
+",
+	"url": "https://justbeerapp.com/article/beer-profiles-crisp-and-clean",
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://cdn2.justwineapp.com/assets/article/2019/04/crisp-clean-beers-justbeer-1200x630.jpg",
+		"width": 1200,		"height": 630
+	},
+	"mainEntityOfPage":{
+		"@type": "WebPage",
+		"@id": "https://justbeerapp.com/article/beer-profiles-crisp-and-clean"
+	},
+	"datePublished": "2019-04-01T11:00:04+00:00",
+	"dateModified": "2019-04-04T16:19:13+00:00",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Just Beer",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.justwineapp.com/assets/layout/logo/logo-jb-json-ld.png",
+			"width": 165,
+			"height": 60
+		}
+	}
+			,"author": {
+			"@type": "Person",
+			"name": "The Beer Community"
+															}
+		}
+	}
+</script>	</div>
+	
+						
+
+	
+	
+	
+
+
+
+		
+			<div class="item item-list item-article-list ">
+		<a href="https://justbeerapp.com/article/how-to-order-a-beer-in-17-different-countries" class="item-link">
+			<div class="item-inner">
+				<div class="item-media">
+					<div class="item-image">
+												<div class="background-image lazy spinner" data-original="https://cdn2.justwineapp.com/assets/article/2019/03/how-to-order-beer-in-other-countries-languages-justbeer-540x300.jpeg" style="background-image: url( 'https://cdn.justwineapp.com/assets/layout/loading_animation_beer_dark.gif' );"></div>
+					</div>
+				</div>
+				<div class="item-content">
+																<span class="category">JBU &gt; Introductory</span>
+					
+										<h3 class="title">How to Order a Beer and Say Cheers in 10 Different Countries</h3>
+
+										<p class="dek">Sometimes you just need to know how to ask for a beer when you’re in a country where you don’t speak the native language. This article is brought to you by Google Translate.
+</p>
+				</div>
+				<div class="item-overlay"></div>
+			</div>
+		</a>
+
+				
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+						"@type": "Article",
+	"headline": "How to Order a Beer and Say Cheers in 10 Different Countries",
+	"description": "Sometimes you just need to know how to ask for a beer when you’re in a country where you don’t speak the native language. This article is brought to you by Google Translate.
+",
+	"url": "https://justbeerapp.com/article/how-to-order-a-beer-in-17-different-countries",
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://cdn2.justwineapp.com/assets/article/2019/03/how-to-order-beer-in-other-countries-languages-justbeer-1200x630.jpeg",
+		"width": 1200,		"height": 630
+	},
+	"mainEntityOfPage":{
+		"@type": "WebPage",
+		"@id": "https://justbeerapp.com/article/how-to-order-a-beer-in-17-different-countries"
+	},
+	"datePublished": "2019-03-29T11:00:43+00:00",
+	"dateModified": "2019-04-01T21:18:17+00:00",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Just Beer",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.justwineapp.com/assets/layout/logo/logo-jb-json-ld.png",
+			"width": 165,
+			"height": 60
+		}
+	}
+			,"author": {
+			"@type": "Person",
+			"name": "The Beer Community"
+															}
+		}
+	}
+</script>	</div>
+	
+						
+
+	
+	
+	
+
+
+
+		
+			<div class="item item-list item-article-list ">
+		<a href="https://justbeerapp.com/article/beer-styles-201-what-is-a-sour-ale-wild-ale" class="item-link">
+			<div class="item-inner">
+				<div class="item-media">
+					<div class="item-image">
+												<div class="background-image lazy spinner" data-original="https://cdn2.justwineapp.com/assets/article/2019/03/sour-beer-540x300.jpg" style="background-image: url( 'https://cdn.justwineapp.com/assets/layout/loading_animation_beer_dark.gif' );"></div>
+					</div>
+				</div>
+				<div class="item-content">
+																<span class="category">JBU &gt; Intermediate</span>
+					
+										<h3 class="title">Beer Styles 201: What is a Sour Ale / Wild Ale?</h3>
+
+										<p class="dek">Sour Ales: where they come from, their appearance, flavour &amp; aroma, palate &amp; mouthfeel, food pairings and serving suggestions are all explained in this Beer Styles 201 article.
+</p>
+				</div>
+				<div class="item-overlay"></div>
+			</div>
+		</a>
+
+				
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+						"@type": "Article",
+	"headline": "Beer Styles 201: What is a Sour Ale / Wild Ale?",
+	"description": "Sour Ales: where they come from, their appearance, flavour &amp; aroma, palate &amp; mouthfeel, food pairings and serving suggestions are all explained in this Beer Styles 201 article.
+",
+	"url": "https://justbeerapp.com/article/beer-styles-201-what-is-a-sour-ale-wild-ale",
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://cdn2.justwineapp.com/assets/article/2019/03/sour-beer-1200x630.jpg",
+		"width": 1200,		"height": 630
+	},
+	"mainEntityOfPage":{
+		"@type": "WebPage",
+		"@id": "https://justbeerapp.com/article/beer-styles-201-what-is-a-sour-ale-wild-ale"
+	},
+	"datePublished": "2019-03-27T11:00:01+00:00",
+	"dateModified": "2019-03-28T22:29:37+00:00",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Just Beer",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.justwineapp.com/assets/layout/logo/logo-jb-json-ld.png",
+			"width": 165,
+			"height": 60
+		}
+	}
+			,"author": {
+			"@type": "Person",
+			"name": "The Beer Community"
+															}
+		}
+	}
+</script>	</div>
+	
+						
+
+	
+	
+	
+
+
+
+		
+			<div class="item item-list item-article-list ">
+		<a href="https://justbeerapp.com/article/beer-styles-201-what-is-a-saison-farmhouse-ale" class="item-link">
+			<div class="item-inner">
+				<div class="item-media">
+					<div class="item-image">
+												<div class="background-image lazy spinner" data-original="https://cdn2.justwineapp.com/assets/article/2019/03/saison-farmhouse-ale-beer-style-justbeer-540x300.jpg" style="background-image: url( 'https://cdn.justwineapp.com/assets/layout/loading_animation_beer_dark.gif' );"></div>
+					</div>
+				</div>
+				<div class="item-content">
+																<span class="category">JBU &gt; Intermediate</span>
+					
+										<h3 class="title">Beer Styles 201: What is a Saison / Farmhouse Ale?</h3>
+
+										<p class="dek">Saisons and Farmhouse Ales: where they come from, their appearance, flavour &amp; aroma, palate &amp; mouthfeel, food pairings and serving suggestions are all explained in this Beer Styles 201 article.
+</p>
+				</div>
+				<div class="item-overlay"></div>
+			</div>
+		</a>
+
+				
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+						"@type": "Article",
+	"headline": "Beer Styles 201: What is a Saison / Farmhouse Ale?",
+	"description": "Saisons and Farmhouse Ales: where they come from, their appearance, flavour &amp; aroma, palate &amp; mouthfeel, food pairings and serving suggestions are all explained in this Beer Styles 201 article.
+",
+	"url": "https://justbeerapp.com/article/beer-styles-201-what-is-a-saison-farmhouse-ale",
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://cdn2.justwineapp.com/assets/article/2019/03/saison-farmhouse-ale-beer-style-justbeer-1200x630.jpg",
+		"width": 1200,		"height": 630
+	},
+	"mainEntityOfPage":{
+		"@type": "WebPage",
+		"@id": "https://justbeerapp.com/article/beer-styles-201-what-is-a-saison-farmhouse-ale"
+	},
+	"datePublished": "2019-03-18T11:00:21+00:00",
+	"dateModified": "2019-03-28T22:42:33+00:00",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Just Beer",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.justwineapp.com/assets/layout/logo/logo-jb-json-ld.png",
+			"width": 165,
+			"height": 60
+		}
+	}
+			,"author": {
+			"@type": "Person",
+			"name": "The Beer Community"
+															}
+		}
+	}
+</script>	</div>
+	
+						
+
+	
+	
+	
+
+
+
+		
+			<div class="item item-list item-article-list ">
+		<a href="https://justbeerapp.com/article/stouts-vs-porters-whats-the-difference" class="item-link">
+			<div class="item-inner">
+				<div class="item-media">
+					<div class="item-image">
+												<div class="background-image lazy spinner" data-original="https://cdn2.justwineapp.com/assets/article/2019/03/stouts-vs-porters-justbeer-540x300.jpg" style="background-image: url( 'https://cdn.justwineapp.com/assets/layout/loading_animation_beer_dark.gif' );"></div>
+					</div>
+				</div>
+				<div class="item-content">
+																<span class="category">JBU</span>
+					
+										<h3 class="title">Stouts vs. Porters – What’s the difference?</h3>
+
+										<p class="dek">What is the difference between a porter and a stout? Should stouts be considered a porter? If you find yourself asking questions about stouts and porters every time you reach for one, continue reading for your answers!
+</p>
+				</div>
+				<div class="item-overlay"></div>
+			</div>
+		</a>
+
+				
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+						"@type": "Article",
+	"headline": "Stouts vs. Porters – What’s the difference?",
+	"description": "What is the difference between a porter and a stout? Should stouts be considered a porter? If you find yourself asking questions about stouts and porters every time you reach for one, continue reading for your answers!
+",
+	"url": "https://justbeerapp.com/article/stouts-vs-porters-whats-the-difference",
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://cdn2.justwineapp.com/assets/article/2019/03/stouts-vs-porters-justbeer-1200x630.jpg",
+		"width": 1200,		"height": 630
+	},
+	"mainEntityOfPage":{
+		"@type": "WebPage",
+		"@id": "https://justbeerapp.com/article/stouts-vs-porters-whats-the-difference"
+	},
+	"datePublished": "2019-03-01T12:00:09+00:00",
+	"dateModified": "2019-02-19T17:41:37+00:00",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Just Beer",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.justwineapp.com/assets/layout/logo/logo-jb-json-ld.png",
+			"width": 165,
+			"height": 60
+		}
+	}
+			,"author": {
+			"@type": "Person",
+			"name": "The Beer Community"
+															}
+		}
+	}
+</script>	</div>
+	
+				</div>
+					</section>
+							
+		</div>
+	</div>
+																
+			<section id="zone-article-general" class="container wrapper-zone">
+				
+
+	
+	
+	
+		
+	
+
+	<div class="zone-header  ">
+							
+	<div class="section-header ">
+		<h2 class="header">Pub Talk</h2>
+
+					<a href="/articles/pubtalk"><span class="icon icon-arrow-right"></span><span class="text-more">More</span></a>
+			</div>
+
+	</div>
+
+			<div class="collection">
+					
+
+	
+	
+	
+
+
+
+		
+			<div class="item item-polaroid item-article-polaroid ">
+		<a href="https://justbeerapp.com/article/5-calgary-ab-activities-every-beer-lover-needs-to-try" class="item-link">
+			<div class="item-inner">
+				<div class="item-media">
+					<div class="item-image">
+												<div class="background-image lazy spinner" data-original="https://cdn2.justwineapp.com/assets/article/2019/03/things-to-do-in-calgary--1800x1000.jpg" style="background-image: url( 'https://cdn.justwineapp.com/assets/layout/loading_animation_beer_dark.gif' );"></div>
+					</div>
+				</div>
+				<div class="item-content">
+										
+										<h3 class="title">5 Calgary Activities Every Beer Lover Needs To Try</h3>
+
+										<p class="dek">Whether you’re looking for things to do in Calgary with your best friend or looking for some Calgary date ideas, if you and your partner in ...</p>
+				</div>
+				<div class="item-overlay"></div>
+			</div>
+		</a>
+
+				
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+						"@type": "Article",
+	"headline": "5 Calgary Activities Every Beer Lover Needs To Try",
+	"description": "Whether you’re looking for things to do in Calgary with your best friend or looking for some Calgary date ideas, if you and your partner in crime love beer, you have to check out these places together!
+",
+	"url": "https://justbeerapp.com/article/5-calgary-ab-activities-every-beer-lover-needs-to-try",
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://cdn2.justwineapp.com/assets/article/2019/03/things-to-do-in-calgary--1200x630.jpg",
+		"width": 1200,		"height": 630
+	},
+	"mainEntityOfPage":{
+		"@type": "WebPage",
+		"@id": "https://justbeerapp.com/article/5-calgary-ab-activities-every-beer-lover-needs-to-try"
+	},
+	"datePublished": "2019-03-21T17:11:00+00:00",
+	"dateModified": "2019-03-21T18:16:32+00:00",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Just Beer",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.justwineapp.com/assets/layout/logo/logo-jb-json-ld.png",
+			"width": 165,
+			"height": 60
+		}
+	}
+			,"author": {
+			"@type": "Person",
+			"name": "The Beer Community"
+															}
+		}
+	}
+</script>	</div>
+	
+						
+
+	
+	
+	
+
+
+
+		
+			<div class="item item-polaroid item-article-polaroid ">
+		<a href="https://justbeerapp.com/article/6-of-the-hoppiest-beers-ever-brewed" class="item-link">
+			<div class="item-inner">
+				<div class="item-media">
+					<div class="item-image">
+												<div class="background-image lazy spinner" data-original="https://cdn2.justwineapp.com/assets/article/2019/03/hoppy-beer-justbeer.jpg" style="background-image: url( 'https://cdn.justwineapp.com/assets/layout/loading_animation_beer_dark.gif' );"></div>
+					</div>
+				</div>
+				<div class="item-content">
+										
+										<h3 class="title">6 of the Hoppiest Beers Ever Brewed</h3>
+
+										<p class="dek">Do you consider your self a “hop head”? Then this list is for you! Here are six of the hoppiest beers ever made.
+</p>
+				</div>
+				<div class="item-overlay"></div>
+			</div>
+		</a>
+
+				
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+						"@type": "Article",
+	"headline": "6 of the Hoppiest Beers Ever Brewed",
+	"description": "Do you consider your self a “hop head”? Then this list is for you! Here are six of the hoppiest beers ever made.
+",
+	"url": "https://justbeerapp.com/article/6-of-the-hoppiest-beers-ever-brewed",
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://cdn2.justwineapp.com/assets/article/2019/03/hoppy-beer-justbeer-1200x630.jpg",
+		"width": 1200,		"height": 630
+	},
+	"mainEntityOfPage":{
+		"@type": "WebPage",
+		"@id": "https://justbeerapp.com/article/6-of-the-hoppiest-beers-ever-brewed"
+	},
+	"datePublished": "2019-03-21T11:00:47+00:00",
+	"dateModified": "2019-03-08T18:54:04+00:00",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Just Beer",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.justwineapp.com/assets/layout/logo/logo-jb-json-ld.png",
+			"width": 165,
+			"height": 60
+		}
+	}
+			,"author": {
+			"@type": "Person",
+			"name": "The Beer Community"
+															}
+		}
+	}
+</script>	</div>
+	
+						
+
+	
+	
+	
+
+
+
+		
+			<div class="item item-polaroid item-article-polaroid ">
+		<a href="https://justbeerapp.com/article/edmontons-top-6-irish-pubs-to-visit-on-st-patricks-day" class="item-link">
+			<div class="item-inner">
+				<div class="item-media">
+					<div class="item-image">
+												<div class="background-image lazy spinner" data-original="https://cdn2.justwineapp.com/assets/article/2019/02/guinnessdraught9.jpg" style="background-image: url( 'https://cdn.justwineapp.com/assets/layout/loading_animation_beer_dark.gif' );"></div>
+					</div>
+				</div>
+				<div class="item-content">
+										
+										<h3 class="title">Edmonton’s Top 6 Irish Pubs to Visit on St. Patricks Day</h3>
+
+										<p class="dek">With St. Patrick’s Day coming up, you better start  booking your reservations for the best St. Paddy’s Day ever. To help with your planning,...</p>
+				</div>
+				<div class="item-overlay"></div>
+			</div>
+		</a>
+
+				
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+						"@type": "Article",
+	"headline": "Edmonton’s Top 6 Irish Pubs to Visit on St. Patricks Day",
+	"description": "With St. Patrick’s Day coming up, you better start  booking your reservations for the best St. Paddy’s Day ever. To help with your planning, here are Edmonton’s best Irish bars.
+",
+	"url": "https://justbeerapp.com/article/edmontons-top-6-irish-pubs-to-visit-on-st-patricks-day",
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://cdn2.justwineapp.com/assets/article/2019/02/guinnessdraught9-1200x630.jpg",
+		"width": 1200,		"height": 630
+	},
+	"mainEntityOfPage":{
+		"@type": "WebPage",
+		"@id": "https://justbeerapp.com/article/edmontons-top-6-irish-pubs-to-visit-on-st-patricks-day"
+	},
+	"datePublished": "2019-03-13T06:00:26+00:00",
+	"dateModified": "2019-03-13T16:06:57+00:00",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Just Beer",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.justwineapp.com/assets/layout/logo/logo-jb-json-ld.png",
+			"width": 165,
+			"height": 60
+		}
+	}
+			,"author": {
+			"@type": "Person",
+			"name": "The Beer Community"
+															}
+		}
+	}
+</script>	</div>
+	
+						
+
+	
+	
+	
+
+
+
+		
+			<div class="item item-polaroid item-article-polaroid ">
+		<a href="https://justbeerapp.com/article/11-irish-bars-in-calgary-to-hit-up-on-st-patricks-day" class="item-link">
+			<div class="item-inner">
+				<div class="item-media">
+					<div class="item-image">
+												<div class="background-image lazy spinner" data-original="https://cdn2.justwineapp.com/assets/article/2019/03/alcohol-bar-bartender-274194.jpg" style="background-image: url( 'https://cdn.justwineapp.com/assets/layout/loading_animation_beer_dark.gif' );"></div>
+					</div>
+				</div>
+				<div class="item-content">
+										
+										<h3 class="title">11 Irish Bars in Calgary to Hit Up on St. Patricks Day</h3>
+
+										<p class="dek">St. Patrick’s Day is every beer lovers favourite holiday. To help with your St. Patty’s party, here are Calgary’s top Irish pubs to visit on...</p>
+				</div>
+				<div class="item-overlay"></div>
+			</div>
+		</a>
+
+				
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+						"@type": "Article",
+	"headline": "11 Irish Bars in Calgary to Hit Up on St. Patricks Day",
+	"description": "St. Patrick’s Day is every beer lovers favourite holiday. To help with your St. Patty’s party, here are Calgary’s top Irish pubs to visit on March 17th.
+",
+	"url": "https://justbeerapp.com/article/11-irish-bars-in-calgary-to-hit-up-on-st-patricks-day",
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://cdn2.justwineapp.com/assets/article/2019/03/alcohol-bar-bartender-274194-1200x630.jpg",
+		"width": 1200,		"height": 630
+	},
+	"mainEntityOfPage":{
+		"@type": "WebPage",
+		"@id": "https://justbeerapp.com/article/11-irish-bars-in-calgary-to-hit-up-on-st-patricks-day"
+	},
+	"datePublished": "2019-03-11T11:00:11+00:00",
+	"dateModified": "2019-03-11T21:33:49+00:00",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Just Beer",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.justwineapp.com/assets/layout/logo/logo-jb-json-ld.png",
+			"width": 165,
+			"height": 60
+		}
+	}
+			,"author": {
+			"@type": "Person",
+			"name": "The Beer Community"
+															}
+		}
+	}
+</script>	</div>
+	
+						
+
+	
+	
+	
+
+
+
+		
+			<div class="item item-polaroid item-article-polaroid ">
+		<a href="https://justbeerapp.com/article/8-best-beers-to-drink-on-mardi-gras" class="item-link">
+			<div class="item-inner">
+				<div class="item-media">
+					<div class="item-image">
+												<div class="background-image lazy spinner" data-original="https://cdn2.justwineapp.com/assets/article/2019/02/mardi-gras-beers-justbeer.jpg" style="background-image: url( 'https://cdn.justwineapp.com/assets/layout/loading_animation_beer_dark.gif' );"></div>
+					</div>
+				</div>
+				<div class="item-content">
+										
+										<h3 class="title">8 Best Beers to Drink on Mardi Gras</h3>
+
+										<p class="dek">Mardi Gras falls late this year… which gives you the perfect amount of time to stock up on brews for your Fat Tuesday celebrations. Here are...</p>
+				</div>
+				<div class="item-overlay"></div>
+			</div>
+		</a>
+
+				
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+						"@type": "Article",
+	"headline": "8 Best Beers to Drink on Mardi Gras",
+	"description": "Mardi Gras falls late this year… which gives you the perfect amount of time to stock up on brews for your Fat Tuesday celebrations. Here are eight beers that we think pair nicely with a fun Mardi Gras party.
+",
+	"url": "https://justbeerapp.com/article/8-best-beers-to-drink-on-mardi-gras",
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://cdn2.justwineapp.com/assets/article/2019/02/mardi-gras-beers-justbeer-1200x630.jpg",
+		"width": 1200,		"height": 630
+	},
+	"mainEntityOfPage":{
+		"@type": "WebPage",
+		"@id": "https://justbeerapp.com/article/8-best-beers-to-drink-on-mardi-gras"
+	},
+	"datePublished": "2019-02-25T12:00:57+00:00",
+	"dateModified": "2019-02-22T22:54:01+00:00",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Just Beer",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.justwineapp.com/assets/layout/logo/logo-jb-json-ld.png",
+			"width": 165,
+			"height": 60
+		}
+	}
+			,"author": {
+			"@type": "Person",
+			"name": "The Beer Community"
+															}
+		}
+	}
+</script>	</div>
+	
+						
+
+	
+	
+	
+
+
+
+		
+			<div class="item item-polaroid item-article-polaroid ">
+		<a href="https://justbeerapp.com/article/the-best-tips-for-an-aspiring-bartender" class="item-link">
+			<div class="item-inner">
+				<div class="item-media">
+					<div class="item-image">
+												<div class="background-image lazy spinner" data-original="https://cdn2.justwineapp.com/assets/article/2019/02/TSP-160419-181-1.jpg" style="background-image: url( 'https://cdn.justwineapp.com/assets/layout/loading_animation_beer_dark.gif' );"></div>
+					</div>
+				</div>
+				<div class="item-content">
+										
+										<h3 class="title">The Best Tips For An Aspiring Bartender</h3>
+
+										<p class="dek">Are you an aspiring bartender? We had a chat with some amazing bartenders and asked them to share with us their best advice for a new or asp...</p>
+				</div>
+				<div class="item-overlay"></div>
+			</div>
+		</a>
+
+				
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+						"@type": "Article",
+	"headline": "The Best Tips For An Aspiring Bartender",
+	"description": "Are you an aspiring bartender? We had a chat with some amazing bartenders and asked them to share with us their best advice for a new or aspiring bartender, some of their favourite parts of the job, and let us in on their favourite recipes!
+",
+	"url": "https://justbeerapp.com/article/the-best-tips-for-an-aspiring-bartender",
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://cdn2.justwineapp.com/assets/article/2019/02/TSP-160419-181-1-1200x630.jpg",
+		"width": 1200,		"height": 630
+	},
+	"mainEntityOfPage":{
+		"@type": "WebPage",
+		"@id": "https://justbeerapp.com/article/the-best-tips-for-an-aspiring-bartender"
+	},
+	"datePublished": "2019-02-24T07:00:25+00:00",
+	"dateModified": "2019-02-25T17:08:01+00:00",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Just Beer",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.justwineapp.com/assets/layout/logo/logo-jb-json-ld.png",
+			"width": 165,
+			"height": 60
+		}
+	}
+			,"author": {
+			"@type": "Person",
+			"name": "The Beer Community"
+															}
+		}
+	}
+</script>	</div>
+	
+				</div>
+			</section>
+				</div>
+
+			            
+<footer id="footer">
+	<div id="footer-main">
+		<div class="container">
+			<div class="row">
+				<div class="col-content">
+					<a id="logo-footer" class="logo" href="https://justbeerapp.com/">
+						Just Beer
+					</a>
+					<p>JustBeer is a community for beer lovers and enthusiasts around the world. Our&nbsp;mission is to make beer more approachable by creating a space for beginners and experts to contribute their opinions, skills and experiences; as well as provide a conduit to research new beers and connect with fellow beer&nbsp;lovers. </p>
+					<p id="menu-footer-legal">
+						<a href="https://justbeerapp.com/terms">Terms and Conditions</a>&ensp;&bull;&ensp;<a href="https://justbeerapp.com/privacy">Privacy Policy</a>&ensp;&bull;&ensp;<a href="https://justbeerapp.com/sitemap">Site Map</a>
+					</p>
+				</div>
+				<div class="col-nav">
+						<nav id="menu-footer-primary">
+											</nav>
+					<div class="row">
+						<div class="col-social">
+							<h3 class="header">Stay Connected</h3>
+							<nav id="menu-footer-social">
+								<ul class="nav navbar-nav">
+									<li>
+										<a target="_blank" href="https://www.facebook.com/JustBeerApp">
+											<span class="icon icon-facebook"></span>
+											<span class="text">Facebook</span>
+										</a>
+									</li>
+									<li>
+										<a target="_blank" href="https://twitter.com/JustBeerApp">
+											<span class="icon icon-twitter"></span>
+											<span class="text">Twitter</span>
+										</a>
+									</li>
+									<li>
+										<a target="_blank" href="https://www.instagram.com/justbeerapp">
+											<span class="icon icon-instagram"></span>
+											<span class="text">Instagram</span>
+										</a>
+									</li>
+									<li>
+										<a target="_blank" href="https://plus.google.com/+justbeerapp">
+											<span class="icon icon-google-plus"></span>
+											<span class="text">Google+</span>
+										</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+													<div class="col-download">
+								<h3 class="header">Get the App</h3>
+								<nav id="menu-footer-download">
+									<div class="collection">
+										<div class="item item-footer-buton">
+											<a target="_blank" href="https://play.google.com/store/apps/details?id=com.mobilityquotient.justbeer" class="item-link">
+												<div class="item-inner">
+													<div class="item-media">
+														<span class="icon icon-google-play"></span>
+													</div>
+													<div class="item-content">
+														<span class="dek">Get it on</span>
+														<span class="title">Google Play</span>
+													</div>
+												</div>
+											</a>
+										</div>
+										<div class="item item-footer-buton">
+											<a target="_blank" href="https://itunes.apple.com/us/app/just-beer/id752672917" class="item-link">
+												<div class="item-inner">
+													<div class="item-media">
+														<span class="icon icon-apple"></span>
+													</div>
+													<div class="item-content">
+														<span class="dek">Download on the</span>
+														<span class="title">App Store</span>
+													</div>
+												</div>
+											</a>
+										</div>
+									</div>
+								</nav>
+							</div>											</div>				</div>			</div>		</div>	</div>	<div id="footer-fam">
+		<div class="container">
+			<h3 class="header">Friends &amp; Family of Just Beer</h3>
+			<a id="logo-mq" class="logo" href="http://mobilityquotient.com" target="_blank">Mobility Quotient</a>
+			<a id="logo-1oz" class="logo" >First Ounce</a>
+			<a id="logo-jw" class="logo" href="https://justwineapp.com" target="_blank">Just Wine</a>
+		</div>
+	</div>	<div id="footer-legal">
+		&copy; 2019&ensp;&bull;&ensp;<a href="http://mobilityquotient.com" target="_blank">Mobility&nbsp;Quotient&nbsp;Solutions&nbsp;Inc.</a>&ensp;&bull;&ensp;All&nbsp;rights&nbsp;reserved.
+	</div></footer>        	
+				</body>
+</html>
+
