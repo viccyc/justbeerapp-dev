@@ -19,9 +19,14 @@ class HttpController {
       $client = new \GuzzleHttp\Client(['base_uri' => 'https://jsonplaceholder.typicode.com/']);
       // Send a request to https://justbeerapp.com/api/v8/articles
       $response = $client->request('GET', 'todos/1');
-      dump($response);
+      // $jsonResponse = $this->json($response);
+      $body = $response->getBody();
+      // Implicitly cast the body to a string and echo it
+      echo $body;
+      // return $body;
       exit;
 
-      return $this->json(json_decode($response->getBody()));
+      // return $this->json($response);
+      // return $this->json(json_decode($response->getBody()));
   }
 }
