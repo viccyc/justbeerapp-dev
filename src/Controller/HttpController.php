@@ -17,9 +17,11 @@ class HttpController extends Controller {
 
   public function getArticles() {
       // Create a client with a base URI
-      $client = new \GuzzleHttp\Client(['base_uri' => 'https://jsonplaceholder.typicode.com/']);
+    //   $client = new \GuzzleHttp\Client(['base_uri' => 'https://jsonplaceholder.typicode.com/']);
+      $client = new \GuzzleHttp\Client(['base_uri' => 'https://justbeerapp.com/api/']);
       // Send a request to https://justbeerapp.com/api/v8/articles
-      $response = $client->request('GET', 'todos/1');
+    //   $response = $client->request('GET', 'todos/1');
+      $response = $client->request('GET', 'v8/articles');
 
     //   $vars = get_object_vars ( $body );
     //   foreach($vars as $key=>$value) {
